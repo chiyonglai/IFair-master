@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#f6b300</color>
+
+    //toolbar background color
+    <color name="color_toolbar_bg_color">#f8f8f8</color>
+    //線條的顏色, d4d4d4
+    <color name="color_line">#cbcbcb</color>
+    //底部導覽背景
+    <color name="color_bottom_navigation">#caffffff</color>
+    //登入按鈕白色字體
+    <color name="color_white">#FFFFFF</color>
+    //黃色字體
+    <color name="color_yellow">#f6b300</color>
+    //黃色字體透明
+    <color name="color_yellow_alpha">#95f6b300</color>
+    //淺黃色字體
+    <color name="color_yellow_gray">#F0E68C</color>
+    //NFC 灰色ICON背景
+    <color name="color_nfc_gray_background">#d7dee1</color>
+    //NFC 黃色ICON背景
+    <color name="color_nfc_yellow_background">#f6b300</color>
+    //圖片 灰色背景
+    <color name="color_nfc_img_background">#eaeaea</color>
+    //字體顏色
+    <color name="color_text_gray">#737373</color>
+    //字體顏色
+    <color name="color_text_black">#000000</color>
+    //最新消息背景
+    <color name="color_news_background">#eeffffff</color>
+    //陰影顏色
+    <color name="color_shadow">#00000000</color>
+    <color name="color_shadow1">#88333333</color>
+    <color name="color_shadow2">#bbe9e9e9</color>
+    //最新消息，網址顏色
+    <color name="color_news_web">#36a4f2</color>
+    //最新消息，特價顏色
+    <color name="color_sale_text">#0d3561</color>
+    <color name="primary_dark_material_light">#757575</color>
+</resources>

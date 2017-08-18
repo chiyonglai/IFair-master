@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_white">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.ksoichiro.android.observablescrollview.ObservableRecyclerView
+            android:id="@+id/recycler_magazine_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/activity_main_navi_height" />
+
+        <LinearLayout
+            android:id="@+id/linear_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_70"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_top"
+                android:layout_width="@dimen/to_top_img_size"
+                android:layout_height="@dimen/to_top_img_size"
+                android:src="@drawable/news_btn_a_top" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/to_top"
+                android:textSize="14sp"
+                android:textColor="@color/color_yellow"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 往上滑，要移動的View-->
+    <FrameLayout
+        android:id="@+id/frame_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/frame_height_magazine">
+        <!-- 背景圖片-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:id="@+id/viewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_30"/>
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/frame_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_bar_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:clipChildren="false">
+        <com.ifair.customView.CustomTitleView
+            android:id="@+id/head_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/txt_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/magazine_information"
+            android:textColor="@color/color_yellow"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+
+</RelativeLayout>
+

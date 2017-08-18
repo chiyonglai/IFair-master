@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:background="@color/color_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <!--- NFC Frame -->
+            <FrameLayout
+                android:id="@+id/frame_nfc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/activity_main_navi_height"/>
+            <!--- 商品雜誌 Frame -->
+            <FrameLayout
+                android:id="@+id/frame_magazine"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <!--- 最新消息 Frame -->
+            <FrameLayout
+                android:id="@+id/frame_news"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <!--- 我的最愛 Frame -->
+            <FrameLayout
+                android:id="@+id/frame_favorite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <!--- 設定 Frame -->
+            <FrameLayout
+                android:id="@+id/frame_setting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_line"
+                android:layout_above="@+id/linear_bottom"/>
+
+            <!--- 底部導覽按鈕 -->
+            <LinearLayout
+                android:id="@+id/linear_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_main_navi_height"
+                android:orientation="horizontal"
+                android:background="@color/color_bottom_navigation"
+                android:layout_alignParentBottom="true"
+                android:clickable="true">
+
+                <!--- NFC 按鈕 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_bottom_nfc"
+                        android:layout_width="@dimen/activity_main_navi_btn_size"
+                        android:layout_height="@dimen/activity_main_navi_btn_size"
+                        android:src="@drawable/all_btn_nfc"/>
+                </LinearLayout>
+
+                <!--- 雜誌 按鈕 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_bottom_magazine"
+                        android:layout_width="@dimen/activity_main_navi_btn_size"
+                        android:layout_height="@dimen/activity_main_navi_btn_size"
+                        android:src="@drawable/all_btn_magazine"/>
+                </LinearLayout>
+
+                <!--- 最新消息 按鈕 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_bottom_news"
+                        android:layout_width="@dimen/activity_main_navi_btn_size"
+                        android:layout_height="@dimen/activity_main_navi_btn_size"
+                        android:src="@drawable/all_btn_news"/>
+                </LinearLayout>
+
+                <!--- 我的最愛 按鈕 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_bottom_favorite"
+                        android:layout_width="@dimen/activity_main_navi_btn_size"
+                        android:layout_height="@dimen/activity_main_navi_btn_size"
+                        android:src="@drawable/all_btn_favorite"/>
+                </LinearLayout>
+
+                <!--- 設定 按鈕 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_bottom_setting"
+                        android:layout_width="@dimen/activity_main_navi_btn_size"
+                        android:layout_height="@dimen/activity_main_navi_btn_size"
+                        android:src="@drawable/all_btn_setting"/>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/color_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/title_yellow" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/setting_save"
+            android:textColor="@color/color_yellow"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <!-- 帳號 -->
+    <RelativeLayout
+        android:id="@+id/rl_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/register_input_text_margin">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextInputLayoutBlack"
+            app:hintTextAppearance="@style/TextInputLayoutBlack">
+
+            <EditText
+                android:id="@+id/edt_account"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.9"
+                android:background="@null"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/setting_account"
+                android:singleLine="true"
+                android:textColor="@color/color_text_black"
+                android:textSize="13sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@+id/til_account"
+            style="@style/LineStyle" />
+    </RelativeLayout>
+
+    <!-- 姓名 -->
+    <RelativeLayout
+        android:id="@+id/rl_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/register_input_text_margin">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextInputLayoutBlack"
+            app:hintTextAppearance="@style/TextInputLayoutBlack">
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.9"
+                android:background="@null"
+                android:hint="@string/setting_name"
+                android:singleLine="true"
+                android:textColor="@color/color_text_black"
+                android:textSize="13sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/img_name"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignRight="@+id/til_name"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:background="@drawable/ic_check"
+            android:visibility="invisible" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@+id/til_name"
+            style="@style/LineStyle" />
+    </RelativeLayout>
+
+    <!-- 生日 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_birthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/register_input_text_margin">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextInputLayoutBlack"
+            app:hintTextAppearance="@style/TextInputLayoutBlack">
+
+            <EditText
+                android:id="@+id/edt_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.9"
+                android:background="@null"
+                android:hint="@string/setting_birthday"
+                android:singleLine="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textColor="@color/color_text_black"
+                android:textSize="13sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@+id/til_birthday"
+            style="@style/LineStyle" />
+    </RelativeLayout>
+    <!-- 性別 -->
+    <LinearLayout
+        android:id="@+id/linear_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/ProfileTextViewStyle"
+            android:text="@string/setting_gender" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:id="@+id/linear_male"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/img_male"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_panorama_fish_eye" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/sign_up_logo_a_male" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_female"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/img_female"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_panorama_fish_eye" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/sign_up_logo_a_female" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            style="@style/LineStyle"
+            android:layout_marginTop="15dp" />
+
+        <!-- 手機號碼 -->
+        <RelativeLayout
+            android:id="@+id/rl_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/register_input_text_margin">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_telephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextInputLayoutBlack"
+                app:hintTextAppearance="@style/TextInputLayoutBlack">
+
+                <EditText
+                    android:id="@+id/edt_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.9"
+                    android:background="@null"
+                    android:hint="@string/registered_tel"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="13sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/img_telephone"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignRight="@+id/til_telephone"
+                android:layout_centerVertical="true"
+                android:layout_gravity="end"
+                android:background="@drawable/ic_check"
+                android:visibility="invisible" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@+id/til_telephone"
+                style="@style/LineStyle" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/register_input_text_margin">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextInputLayoutBlack"
+                app:hintTextAppearance="@style/TextInputLayoutBlack">
+
+                <EditText
+                    android:id="@+id/edt_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.9"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/setting_area"
+                    android:singleLine="true"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="13sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@+id/til_area"
+                style="@style/LineStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

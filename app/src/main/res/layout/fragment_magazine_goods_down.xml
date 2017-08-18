@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_20"
+    android:orientation="vertical"
+    android:background="@color/color_white">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/img_goods"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magazine_recommened_view_pager_image_size"
+        android:scaleType="centerCrop"/>
+<!--
+    <TextView
+        android:id="@+id/tv_firm_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_line" />
+-->
+    <TextView
+        android:id="@+id/tv_goods_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/color_text_black"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <!--
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_goods_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_line"
+                android:textSize="13sp" />
+
+            <View
+                android:id="@+id/line_price"
+                android:layout_width="@dimen/magazine_line"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:background="@color/color_line" />
+        </RelativeLayout>
+-->
+        <TextView
+            android:id="@+id/tv_goods_price_yellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:textColor="@color/color_yellow"
+            android:textSize="13sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_product_submit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/img_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/color_nfc_img_background"
+            android:scaleType="fitXY" />
+
+        <include layout="@layout/back_title" />
+
+
+        <ImageView
+            android:id="@+id/img_camera"
+            android:layout_width="@dimen/fragment_nfc_img"
+            android:layout_height="@dimen/fragment_nfc_img"
+            android:src="@drawable/nfc_image_a_camera"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btn_up_file"
+            android:layout_width="@dimen/fragment_nfc_btn_file_width"
+            android:layout_height="@dimen/fragment_nfc_btn_file_height"
+            android:background="@drawable/btn_yellow2"
+            android:text="@string/nfc_up_file"
+            android:textColor="@color/color_yellow"
+            android:textSize="13sp"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:id="@+id/rela_clear"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/black_circle" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_clear"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edt_where_goods"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_nfc_edt_where"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edt_nfc_background"
+        android:hint="@string/nfc_where_goods"
+        android:paddingStart="10dp"
+        android:singleLine="true"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_nfc_rela_explanation_width"
+        android:layout_margin="5dp"
+        android:background="@drawable/edt_nfc_background">
+
+        <EditText
+            android:id="@+id/edt_explanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/nfc_explanation"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_yellow2"
+        android:text="@string/nfc_btn_send"
+        android:textColor="@color/color_yellow"
+        android:textSize="15sp"
+        android:layout_margin="4dp"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>

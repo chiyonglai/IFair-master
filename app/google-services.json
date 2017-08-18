@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "468346748953",
+    "firebase_url": "https://ifair-50e02.firebaseio.com",
+    "project_id": "ifair-50e02",
+    "storage_bucket": "ifair-50e02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468346748953:android:9a12facc6cfb28f3",
+        "android_client_info": {
+          "package_name": "com.ifair"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468346748953-mf29uo751ci3rb8te1sku46ku0tgu183.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ifair",
+            "certificate_hash": "4b36a0c92446cd240251ef3ec5d91310b9021626"
+          }
+        },
+        {
+          "client_id": "468346748953-71si16j1s69spo6th7lkukpf7ncsjpmt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ifair",
+            "certificate_hash": "364badf4015a0d0f5b85b46b5a581ed5f3c16e7a"
+          }
+        },
+        {
+          "client_id": "468346748953-2otivh33eitdsfomlv7vqf23vmsppf1b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiK6juX1NbR0DIjsBC5Ki-RnsHYk6TO-g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468346748953-2otivh33eitdsfomlv7vqf23vmsppf1b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

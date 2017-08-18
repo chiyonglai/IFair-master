@@ -1,0 +1,315 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_white">
+
+    <include layout="@layout/title" />
+
+    <!-- 掃描音效 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_row_height"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/setting_noise" />
+
+                <Switch
+                    android:id="@+id/switch_noise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/LineStyle"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 掃描震動 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_row_height"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/setting_shock" />
+
+                <Switch
+                    android:id="@+id/switch_shock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:checked="true"/>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/LineStyle"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 推播 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_row_height"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/setting_notification" />
+
+                <Switch
+                    android:id="@+id/switch_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:checked="true"/>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/LineStyle"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!-- 會員資料修改 -->
+    <RelativeLayout
+        android:id="@+id/rela_member"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_row_height"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="?attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/setting_member" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_keyboard_arrow_right_black" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/LineStyle"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 會員資料修改 -->
+    <RelativeLayout
+        android:id="@+id/rela_change_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_row_height"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="?attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/setting_change_password" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_keyboard_arrow_right_black" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/LineStyle"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- NFC介紹 -->
+    <RelativeLayout
+        android:id="@+id/rela_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_row_height"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="?attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/setting_nfc_introduction" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_keyboard_arrow_right_black" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/LineStyle"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 關於iFair -->
+    <RelativeLayout
+        android:id="@+id/rela_about"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_row_height"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="?attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/setting_about" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_keyboard_arrow_right_black" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/LineStyle"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 登入 -->
+    <RelativeLayout
+        android:id="@+id/rela_logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_row_height"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="?attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <TextView
+                    android:id="@+id/txt_member_status"
+                    style="@style/SettingTextStyle"
+                    android:text="@string/setting_logout" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/LineStyle"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

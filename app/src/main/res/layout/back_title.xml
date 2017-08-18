@@ -1,0 +1,22 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/color_white"
+    xmlns:tools="http://schemas.android.com/tools">
+
+   <include
+       layout="@layout/title"/>
+
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="@dimen/back_image_view_size"
+        android:layout_height="@dimen/back_image_view_size"
+        android:src="@drawable/ic_arrow_back_white"
+        android:layout_centerVertical="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginStart="5dp"/>
+
+
+</RelativeLayout>

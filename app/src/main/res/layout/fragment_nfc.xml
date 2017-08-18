@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rela_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/title" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_nfc_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_nfc_background"
+                android:scaleType="fitXY"
+                android:src="@drawable/nfc_image_a_bg" />
+
+            <RelativeLayout
+                android:id="@+id/rela_nfc_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+
+                <ImageView
+                    android:id="@+id/nfc_gif"
+                    android:layout_width="@dimen/fragment_nfc_icon_width"
+                    android:layout_height="@dimen/fragment_nfc_icon_height"
+                    android:layout_marginStart="@dimen/fragment_nfc_icon_margin_start"
+                    android:layout_marginTop="@dimen/fragment_nfc_gray_icon_margin"
+                    android:background="@color/color_nfc_gray_background"
+                    android:visibility="gone" />
+
+
+                <View
+                    android:id="@+id/view_nfc_icon"
+                    android:layout_width="@dimen/fragment_nfc_icon_width"
+                    android:layout_height="@dimen/fragment_nfc_icon_height"
+                    android:layout_marginStart="@dimen/fragment_nfc_icon_margin_start"
+                    android:layout_marginTop="@dimen/fragment_nfc_yellow_icon_margin"
+                    android:background="@color/color_nfc_yellow_background"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="@dimen/fragment_nfc_phone_width"
+                    android:layout_height="@dimen/fragment_nfc_phone_height"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/nfc_image_a_phone_0" />
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/img_nfc_gif"
+                    android:layout_width="@dimen/fragment_nfc_icon_width"
+                    android:layout_height="@dimen/fragment_nfc_icon_height"
+                    android:layout_marginStart="@dimen/fragment_nfc_icon_margin_start"
+                    android:layout_marginTop="@dimen/fragment_nfc_gray_icon_margin"
+                    android:src="@drawable/nfc_gif" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_nfc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:text="@string/nfc_touch_scan"
+            android:textColor="@color/color_text_gray"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+       android:layout_marginBottom="14dp"
+        android:layout_marginRight="@dimen/margin_20"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/to_top_img_size"
+            android:layout_height="@dimen/to_top_img_size"
+            android:src="@drawable/nfc_btn_a_errorbtn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nfc_error_submit"
+            android:textColor="@color/color_yellow"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

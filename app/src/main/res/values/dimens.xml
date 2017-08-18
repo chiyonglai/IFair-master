@@ -1,0 +1,104 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--底部導覽高度-->
+    <dimen name="activity_main_navi_height">46dp</dimen>
+    <!--底部導覽按鈕大小-->
+    <dimen name="activity_main_navi_btn_size">35dp</dimen>
+    <!--NFC icon背景寬-->
+    <dimen name="fragment_nfc_icon_width">90dp</dimen>
+    <!--NFC icon背景高-->
+    <dimen name="fragment_nfc_icon_height">85dp</dimen>
+    <!--NFC icon背景距離右邊多遠-->
+    <dimen name="fragment_nfc_icon_margin_start">47dp</dimen>
+    <!--NFC icon灰色背景離頂部-->
+    <dimen name="fragment_nfc_gray_icon_margin">80dp</dimen>
+    <!--NFC icon黃色背景離頂部-->
+    <dimen name="fragment_nfc_yellow_icon_margin">165dp</dimen>
+    <!--NFC 手機寬-->
+    <dimen name="fragment_nfc_phone_width">195dp</dimen>
+    <!--NFC 手機高-->
+    <dimen name="fragment_nfc_phone_height">330dp</dimen>
+    <!--NFC 背景高度-->
+    <dimen name="fragment_nfc_background">130dp</dimen>
+    <!--NFC 提報按鈕高度-->
+    <dimen name="fragment_nfc_btn_height">45dp</dimen>
+    <!--NFC 圖片大小-->
+    <dimen name="fragment_nfc_img">70dp</dimen>
+    <!--NFC 上傳圖片寬度-->
+    <dimen name="fragment_nfc_btn_file_width">130dp</dimen>
+    <!--NFC 上傳圖片高度-->
+    <dimen name="fragment_nfc_btn_file_height">40dp</dimen>
+    <!--NFC 輸入框，在哪裡看到這個商品-->
+    <dimen name="fragment_nfc_edt_where">40dp</dimen>
+    <!--NFC 輸入框，補充說明-->
+    <dimen name="fragment_nfc_rela_explanation_width">180dp</dimen>
+    <!--CardView margin-->
+    <dimen name="card_margin">5dp</dimen>
+    <!-- custom ToolbarSize -->
+    <dimen name="header_bar_height">38dp</dimen>
+    <!-- Frame 大小 -->
+    <dimen name="frame_height">150dp</dimen>
+    <!-- Frame 距離頂部多高 -->
+    <dimen name="margin_20">15dp</dimen>
+    <!-- Frame 大小 -->
+    <dimen name="frame_height_magazine">230dp</dimen>
+    <!-- 最新消息內頁，分享和愛心的大小 -->
+    <dimen name="news_detail_icon_size">25dp</dimen>
+    <!-- 最新消息，預購和最新Icon的寬 -->
+    <dimen name="item_news_icon_width">40dp</dimen>
+    <!-- 最新消息，預購和最新Icon的高 -->
+    <dimen name="item_news_icon_height">18dp</dimen>
+    <!-- 最新消息，Item的陰影寬度 -->
+    <dimen name="item_news_shadow_width">40dp</dimen>
+    <!-- 登入，按鈕高度 -->
+    <dimen name="login_button_height">48dp</dimen>
+    <!-- 預購按鈕，按鈕高度 -->
+    <dimen name="btn_preOrder_height">30dp</dimen>
+    <!-- 預購按鈕，按鈕寬度 -->
+    <dimen name="btn_preOrder_width">150dp</dimen>
+    <!-- 輸入框高度 -->
+    <dimen name="edt_height">30dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- 設定頁面，欄位高 -->
+    <dimen name="setting_row_height">60dp</dimen>
+    <!-- 內文文字間距寬 -->
+    <dimen name="textView_space_width">4dp</dimen>
+    <!--AppBarLayout Height -->
+    <dimen name="appBar_height">300dp</dimen>
+    <!--ToolBar Height -->
+    <dimen name="toolBar_height">47dp</dimen>
+    <!-- Back ImageView size -->
+    <dimen name="back_image_view_size">30dp</dimen>
+    <!-- ToolBar Width -->
+    <dimen name="toolBar_width">200dp</dimen>
+    <!-- magazine dot 距離底部多高 -->
+    <dimen name="margin_30">25dp</dimen>
+    <!-- magazine line 多長 -->
+    <dimen name="magazine_line">50dp</dimen>
+    <!-- magazine margin 多寬 -->
+    <dimen name="magazine_margin">5dp</dimen>
+    <!-- register text margin -->
+    <dimen name="register_input_text_margin">8dp</dimen>
+    <!-- register logo height -->
+    <dimen name="register_logo_height">70dp</dimen>
+    <!-- margin_10 -->
+    <dimen name="margin_10">5dp</dimen>
+    <!-- margin_50 -->
+    <dimen name="margin_50">45dp</dimen>
+    <!-- margin_70 -->
+    <dimen name="margin_70">60dp</dimen>
+
+    <!-- magazine_recommened_view_pager_size -->
+    <dimen name="magazine_recommened_view_pager_height">210dp</dimen>
+    <dimen name="magazine_recommened_view_pager_image_size">110dp</dimen>
+
+    <dimen name="register_fb_icon_size">60dp</dimen>
+    <dimen name="register_ifair_icon_size">100dp</dimen>
+
+    <dimen name="to_top_img_size">50dp</dimen>
+
+    <dimen name="about_ifair_img_size">300dp</dimen>
+</resources>
