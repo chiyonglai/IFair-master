@@ -49,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/color_line"
-                android:layout_above="@+id/linear_bottom"/>
+                android:layout_above="@+id/linear_bottom" />
 
             <!--- 底部導覽按鈕 -->
             <LinearLayout
@@ -67,28 +67,44 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/img_bottom_nfc"
                         android:layout_width="@dimen/activity_main_navi_btn_size"
                         android:layout_height="@dimen/activity_main_navi_btn_size"
                         android:src="@drawable/all_btn_nfc"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/menu_icon_text_1"
+                        android:textColor="#000000" />
                 </LinearLayout>
 
                 <!--- 雜誌 按鈕 -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_gravity="center">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/img_bottom_magazine"
                         android:layout_width="@dimen/activity_main_navi_btn_size"
                         android:layout_height="@dimen/activity_main_navi_btn_size"
-                        android:src="@drawable/all_btn_magazine"/>
+                        android:src="@drawable/all_btn_magazine" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/menu_icon_text_2"
+                        android:textColor="#000000" />
                 </LinearLayout>
 
                 <!--- 最新消息 按鈕 -->
@@ -97,13 +113,21 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/img_bottom_news"
                         android:layout_width="@dimen/activity_main_navi_btn_size"
                         android:layout_height="@dimen/activity_main_navi_btn_size"
                         android:src="@drawable/all_btn_news"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/menu_icon_text_3"
+                        android:textColor="#000000" />
                 </LinearLayout>
 
                 <!--- 我的最愛 按鈕 -->
@@ -112,13 +136,22 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/img_bottom_favorite"
                         android:layout_width="@dimen/activity_main_navi_btn_size"
                         android:layout_height="@dimen/activity_main_navi_btn_size"
                         android:src="@drawable/all_btn_favorite"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/menu_icon_text_4"
+                        android:textColor="#000000" />
+
                 </LinearLayout>
 
                 <!--- 設定 按鈕 -->
@@ -127,13 +160,22 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/img_bottom_setting"
                         android:layout_width="@dimen/activity_main_navi_btn_size"
                         android:layout_height="@dimen/activity_main_navi_btn_size"
                         android:src="@drawable/all_btn_setting"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/menu_icon_text_5"
+                        android:textColor="#000000" />
+
                 </LinearLayout>
 
 

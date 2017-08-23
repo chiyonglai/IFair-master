@@ -88,10 +88,12 @@ public class FavoriteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
             } else {
                 int[] num = MyTimeUtils.returnPreOrderReciprocal(dataBeanList.get(position - 1).getPre_date_e(), new Date(System.currentTimeMillis()));
-                String goodsPreDate1 = "<font color='#f6b300'><b><big>" + String.valueOf(num[0]) + "</big></b></font>";
-                String goodsPreDate2 = "<font color='#f6b300'><b>" + String.valueOf(num[1]) + "</b></font>";
-                String goodsPreDate3 = "<font color='#f6b300'><b>" + String.valueOf(num[2]) + "</b></font>";
-                ((RecycleHolder) holder).tvGoodsPreDate.setText(Html.fromHtml(context.getString(R.string.magazine_time, goodsPreDate1, goodsPreDate2, goodsPreDate3)));
+                if ( num[0] >= 0 && num[1] >= 0 && num[2] >= 0) {
+                    String goodsPreDate1 = "<font color='#f6b300'><b><big>" + String.valueOf(num[0]) + "</big></b></font>";
+                    String goodsPreDate2 = "<font color='#f6b300'><b>" + String.valueOf(num[1]) + "</b></font>";
+                    String goodsPreDate3 = "<font color='#f6b300'><b>" + String.valueOf(num[2]) + "</b></font>";
+                    ((RecycleHolder) holder).tvGoodsPreDate.setText(Html.fromHtml(context.getString(R.string.magazine_time, goodsPreDate1, goodsPreDate2, goodsPreDate3)));
+                }
                 ((RecycleHolder) holder).tvGoodsPrice.setText(context.getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(dataBeanList.get(position - 1).getPrice())))));
                 ((RecycleHolder) holder).tvGoodsPrice.setTextColor(context.getResources().getColor(R.color.color_text_black));
                 ((RecycleHolder) holder).linePrice.setVisibility(View.GONE);

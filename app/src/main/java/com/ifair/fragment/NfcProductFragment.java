@@ -44,8 +44,10 @@ public class NfcProductFragment extends BaseFragment implements OnGetTrueGoodsLi
     ImageView imgProduct;
     @BindView(R.id.img_youtube)
     ImageView imgYoutube;
-    @BindView(R.id.rela_youtube)
-    RelativeLayout relaYoutube;
+    //@BindView(R.id.rela_youtube)
+    //RelativeLayout relaYoutube;
+    @BindView(R.id.img_real_btn_a_playbtn)
+    ImageView imgRealPlayBtn;
     @BindView(R.id.linear_more)
     LinearLayout linearMore;
     Unbinder unbinder;
@@ -163,10 +165,14 @@ public class NfcProductFragment extends BaseFragment implements OnGetTrueGoodsLi
                         img_url = "http://img.youtube.com/vi/" + AppUtil.extractYoutubeId(strYoutube) + "/0.jpg";
                     Log.i(TAG, "getTrueGoodsMessage: " + img_url);
                     imgYoutube.setVisibility(View.VISIBLE);
+                    imgRealPlayBtn.setVisibility(View.VISIBLE);
                     Glide.with(this).load(img_url).centerCrop().into(imgYoutube);
 
                 } else {
-                    relaYoutube.setVisibility(View.INVISIBLE);
+                    //relaYoutube.setVisibility(View.INVISIBLE);
+                    imgRealPlayBtn.setVisibility(View.INVISIBLE);
+                    if (!Objects.equals(nfcProductResponse.getData().get(0).getGoods_image3().get(1), ""))
+                        Glide.with(this).load(nfcProductResponse.getData().get(0).getGoods_image3().get(1)).centerCrop().into(imgYoutube);
                 }
                 showRealUI();
             } else if (nfcProductResponse.getCode() == CloudCode.Code_No_data) {
@@ -182,7 +188,9 @@ public class NfcProductFragment extends BaseFragment implements OnGetTrueGoodsLi
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rela_youtube:
-                AppUtil.intentUrl(getActivity(), strYoutube);
+                if (!Objects.equals(strYoutube, "")) {
+                    AppUtil.intentUrl(getActivity(), strYoutube);
+                }
                 break;
             case R.id.linear_more:
                 Bundle bundle = new Bundle();

@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -36,6 +37,7 @@ import java.util.Map;
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     private static final String TAG = "MyFirebaseMessagingServ";
+    Bitmap bitmap;
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -66,14 +68,15 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             newIntent.setClass(this, LogoActivity.class);
 
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, newIntent, PendingIntent.FLAG_CANCEL_CURRENT);
+            bitmap = getBitmapFromUrl(remoteMessage.get("image"));
 
             NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
                     .setWhen(System.currentTimeMillis())
                     .setContentIntent(pendingIntent)
+                    .setLargeIcon(bitmap)/*Notification icon image*/
                     .setSmallIcon(R.drawable.notification)
-                    .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(
-                            getBitmapFromUrl(remoteMessage.get("image"))))
-                    .setContentTitle(remoteMessage.get("title"))
+                    .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(bitmap))/*Notification icon image*/
+                    .setContentTitle(remoteMessage.get("title"))//title
                     .setContentText(remoteMessage.get("message"))
                     .setColor(getResources().getColor(R.color.colorAccent))
                     .setAutoCancel(true)
@@ -97,7 +100,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             connection.setDoInput(true);
             connection.connect();
             InputStream input = connection.getInputStream();
-            Bitmap bitmap = BitmapFactory.decodeStream(input);
+            Bitmap bitmap = getCompressBitmapByScale(BitmapFactory.decodeStream(input),100,100);
             return bitmap;
 
         } catch (Exception e) {
@@ -106,4 +109,15 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         }
     }
+
+    public static Bitmap getCompressBitmapByScale(Bitmap bitmap, int maxW, int maxH) {
+        int w = bitmap.getWidth();
+        int h = bitmap.getHeight();
+        float sx = (float) maxW / (float) w;
+        float sy = (float) maxH / (float) h;
+        Matrix matrix = new Matrix();
+        matrix.setScale(sx, sy);
+        return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+    }
+
 }
