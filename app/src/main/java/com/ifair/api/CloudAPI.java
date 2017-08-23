@@ -18,6 +18,7 @@ import com.ifair.listener.OnGetMagazineGoodsDownListener;
 import com.ifair.listener.OnGetMagazineListener;
 import com.ifair.listener.OnGetPreOrderDetailListener;
 import com.ifair.listener.OnGetPreOrderInformationListener;
+import com.ifair.listener.OnGetPushSWITCListener;
 import com.ifair.listener.OnGetTrueGoodsListener;
 import com.ifair.listener.OnNFCSendTagIdListener;
 import com.ifair.listener.OnSendAddFavoriteListener;
@@ -50,6 +51,7 @@ import com.ifair.module.NewRegisterResponse;
 import com.ifair.module.NfcProductResponse;
 import com.ifair.module.PreOrderResponse;
 import com.ifair.module.PreorderInformationResponse;
+import com.ifair.module.PushSWITCResponse;
 import com.ifair.myUtil.AppUtil;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
@@ -135,6 +137,8 @@ public class CloudAPI {
     private OnAddMemberOrderListener onAddMemberOrderListener;
 
     private OnGetMagazineGoodsDownListener onGetMagazineGoodsDownListener;
+
+    private OnGetPushSWITCListener onGetPushSWITCListener;
 
     //---------------------------------------------------------------------------------------------------
     public void setOnSendForgetPasswordListener(OnSendForgetPasswordListener onSendForgetPasswordListener) {
@@ -232,6 +236,9 @@ public class CloudAPI {
         this.onGetMagazineGoodsDownListener = listener;
     }
 
+    public void setOnGetPushSWITCListener(OnGetPushSWITCListener onGetPushSWITCListener) {
+        this.onGetPushSWITCListener = onGetPushSWITCListener;
+    }
     //---------------------------------------------------------------------------------------------------
 
     /**
@@ -1212,5 +1219,61 @@ public class CloudAPI {
                     }
                 });
     }
+
+    /**
+     * 設定開關Push功能
+     *
+     * @param email   帳號
+     * @param// is_push   1是On、0是Off
+     */
+    public void setPushSWITC(String email, String ispush, Activity activity) {
+        Logger.d("setPushSWITC: email="+email);
+        OkGo.post(ApiUri.API_SET_PUSH_SWITC)
+                .tag(this)
+                .params("email", email)
+                .params("is_push",ispush)
+                .execute(new DialogCallback(activity) {
+                    @Override
+                    public void onSuccess(String s, Call call, Response response) {
+                        Logger.json(s);
+                    }
+
+                    @Override
+                    public void onError(Call call, Response response, Exception e) {
+                        super.onError(call, response, e);
+                        Logger.d(e.toString());
+                    }
+                });
+    }
+    /**
+     * 獲得Push開關
+     *
+     * @param email   帳號
+     */
+    public void getPushSWITC(String email, Activity activity) {
+        Logger.d("getPushSWITC: email="+email);
+        OkGo.post(ApiUri.API_GET_PUSH_SWITC)
+                .tag(this)
+                .params("email", email)
+                .execute(new DialogCallback(activity) {
+                    @Override
+                    public void onSuccess(String s, Call call, Response response) {
+                        Logger.json(s);
+                        if (onGetPushSWITCListener != null) {
+                            onGetPushSWITCListener.onGetPushSWITCMessage(s, "");
+                        }
+                    }
+
+                    @Override
+                    public void onError(Call call, Response response, Exception e) {
+                        super.onError(call, response, e);
+                        Logger.d(e.toString());
+                        if (onGetPushSWITCListener != null) {
+                            onGetPushSWITCListener.onGetPushSWITCMessage("", e.getMessage());
+                        }
+                    }
+                });
+    }
+
 
 }

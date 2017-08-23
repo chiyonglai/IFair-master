@@ -21,6 +21,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.NestedScrollView;
 import android.text.Html;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -110,10 +111,12 @@ public class MagazineDetailActivity extends BaseNFcActivity implements OnGetMaga
     TextView txtContent;
     @BindView(R.id.activity_magazine)
     CoordinatorLayout activityMagazine;
-    //@BindView(R.id.tv_goods_price)      //2017/08/18不在使用原售價
-    //TextView tvGoodsPrice;
+    @BindView(R.id.tv_goods_price)      //2017/08/22改原價與特價都相同，只秀橘色字顯示位置置中
+    TextView tvGoodsPrice;
     @BindView(R.id.tv_goods_sale_price)
     TextView tvGoodsSalePrice;
+    @BindView(R.id.tv_mag_detail_rl_2)
+    RelativeLayout tvMagDetailRL2;
     @BindView(R.id.tv_pre_amount)
     TextView tvPreAmount;
     @BindView(R.id.tv_goods_pre_date)
@@ -212,8 +215,16 @@ public class MagazineDetailActivity extends BaseNFcActivity implements OnGetMaga
         initViewPager();
         txtTitle.setText(data.getGoods_name()); //標題
         txtGoodsTitle.setText(data.getGoods_name()); //標題
-        //tvGoodsPrice.setText(getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(data.getOriginal_price())))));  //原價
+        tvGoodsPrice.setText(getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(data.getOriginal_price())))));  //原價
         tvGoodsSalePrice.setText(getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(data.getPrice())))));      //特價
+        if(Integer.parseInt(data.getOriginal_price()) == Integer.parseInt(data.getPrice())){
+            //改原價與特價都相同，只秀橘色字顯示位置置中
+            //android:gravity="left"
+            tvGoodsSalePrice.setGravity(Gravity.CENTER);
+            tvMagDetailRL2.setVisibility(View.GONE);
+        }else{
+            tvGoodsSalePrice.setGravity(Gravity.LEFT);
+        }
         txtLikeNum.setText(AppUtil.numberFormat(data.getLike())); //按讚數
         txtContent.setText(data.getIntroduction()); // 內文
         //txtFirm.setText((data.getFirm_name())); //廠商名稱
