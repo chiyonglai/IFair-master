@@ -61,10 +61,7 @@ public class ApiUri {
     //商品的分享次數
     public static final String API_ADD_SHARE_GOODS= "http://35.164.137.155/api/add_share_goods";
     //推播消息-點擊數
-    public static final String API_PUSH_LIKE_MESSAGE= "http://35.164.137.155/api/add_push_like_message";
-    //設定開關Push功能
-    public static final String API_SET_PUSH_SWITC= "http://35.164.137.155/api/set_push_switch";
-    //獲得Push開關
-    public static final String API_GET_PUSH_SWITC= "http://35.164.137.155/api/get_push_switch";
+    public static final String API_PUSH_LIKE_MESSAGE= "http://35.164.137.155/api/add_push_like_messag";
+
 
 }

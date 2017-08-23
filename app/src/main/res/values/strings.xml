@@ -1,19 +1,12 @@
 <resources>
     <string name="app_name">iFair</string>
 
-    <!-- 選單按鈕下方文字 -->
-    <string name="menu_icon_text_1">真偽驗証</string>
-    <string name="menu_icon_text_2">商品雜誌</string>
-    <string name="menu_icon_text_3">最新消息</string>
-    <string name="menu_icon_text_4">我的最愛</string>
-    <string name="menu_icon_text_5">設定</string>
-
     <!-- NFC 頁面 -->
     <string name="nfc_title">NFC掃描</string>
     <string name="nfc_touch_scan">輕觸螢幕\n將您的手機靠近商品NFC感應標籤</string>
     <string name="nfc_scanning">掃描中...</string>
     <string name="nfc_true_product">這是經過認證的商品</string>
-    <string name="nfc_fake_product">非原廠認証商品</string>
+    <string name="nfc_fake_product">此商品並未在本平台註冊</string>
     <string name="nfc_true_product_more">觀看更多資訊</string>
     <string name="nfc_submit">是否提報？</string>
     <string name="nfc_submit_info">提報資訊</string>
@@ -29,7 +22,7 @@
     <string name="nfc_submit_success">舉報成功</string>
     <string name="nfc_error_submit">異常提報</string>
     <string name="nfc_real_more">觀看更多資訊</string>
-    <string name="nfc_real">原廠認証商品</string>
+    <string name="nfc_real">認證商品</string>
     <string name="nfc_note">備註：</string>
     <string name="nfc_report">第三方公證報告</string>
     <string name="nfc_product_resume">產品履歷</string>
