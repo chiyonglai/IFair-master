@@ -90,7 +90,12 @@ public class MagazineGoodsDownFragment extends BaseFragment {
         tvGoodsName.setText(goods_name);
         //tvFirmName.setText(firm_name);    //2017/08/18不在使用
         //tvGoodsPrice.setText(getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(original_price)))));
-        tvGoodsPriceYellow.setText(getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(price)))));
+        if(Integer.valueOf(price) == 0) {
+            //2017/9/5價格零不顯示
+            tvGoodsPriceYellow.setText("");
+        } else {
+            tvGoodsPriceYellow.setText(getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(price)))));
+        }
     }
 
 

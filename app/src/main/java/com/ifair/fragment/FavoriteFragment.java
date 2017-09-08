@@ -25,6 +25,7 @@ import com.ifair.module.MagazineResponse;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -89,7 +90,7 @@ public class FavoriteFragment extends BaseFragment implements OnGetMagazineListe
     private void getAPI() {
         cloudAPI = CloudAPI.getInstance();
         cloudAPI.setOnGetMagazineListener(this);
-        cloudAPI.getMagazine(userEmail, getActivity());
+        cloudAPI.getMagazine(userEmail, getActivity(), Locale.getDefault().getLanguage());
     }
 
     /**

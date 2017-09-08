@@ -29,6 +29,7 @@ import com.ifair.myUtil.Variable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -135,7 +136,7 @@ public class ProductMoreActivity extends BaseNFcActivity implements OnGetTrueGoo
 
         cloudAPI = CloudAPI.getInstance();
         cloudAPI.setOnGetTrueGoodsListener(this);
-        cloudAPI.getTrueGoods(getIntent().getExtras().getString("product_id"), this);
+        cloudAPI.getTrueGoods(getIntent().getExtras().getString("product_id"), this, Locale.getDefault().getLanguage());
 
         nfcBroadCast = new NfcBroadCast();
         registerReceiver(nfcBroadCast, new IntentFilter(Variable.Intent_Close_NFC_Activity));

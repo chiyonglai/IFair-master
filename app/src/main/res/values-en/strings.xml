@@ -1,0 +1,188 @@
+<resources>
+    <string name="app_name">iFair</string>
+
+    <!-- Menu button below the text -->
+    <string name="menu_icon_text_1">Verification</string>
+    <string name="menu_icon_text_2">Magazine</string>
+    <string name="menu_icon_text_3">News</string>
+    <string name="menu_icon_text_4">Favourite</string>
+    <string name="menu_icon_text_5">Setting</string>
+
+    <!-- NFC page -->
+    <string name="nfc_title">NFC scanning</string>
+    <string name="nfc_touch_scan">Touch the screen \ n Place your phone near the NFC sensor label</string>
+    <string name="nfc_scanning">Scanning ...</string>
+    <string name="nfc_true_product">This is a certified product</string>
+    <string name="nfc_fake_product">Non-original certified goods</string>
+    <string name="nfc_true_product_more">Watch more information</string>
+    <string name="nfc_submit">Whether to report?</string>
+    <string name="nfc_submit_info">Report information</string>
+    <string name="nfc_btn_send">Sent out</string>
+    <string name="nfc_where_goods">Where did you see this product?</string>
+    <string name="nfc_explanation">Supplementary explanation</string>
+    <string name="nfc_up_file">Upload a product image</string>
+    <string name="nfc_product_id">Product ID : %s</string>
+    <string name="nfc_product_date">Registration date : %s</string>
+    <string name="nfc_firm_info">Vendor information</string>
+    <string name="nfc_title_no_register">Unregistered product</string>
+    <string name="nfc_title_register">Register the product</string>
+    <string name="nfc_submit_success">Report success</string>
+    <string name="nfc_error_submit">Abnormal report</string>
+    <string name="nfc_real_more">Watch more information</string>
+    <string name="nfc_real">Original certified goods</string>
+    <string name="nfc_note">Remarks：</string>
+    <string name="nfc_report">Third party notarized report</string>
+    <string name="nfc_product_resume">Product history</string>
+
+    <!-- Latest news page -->
+    <string name="news_title">Latest news</string>
+    <string name="news_activity_date">Activity date：%1$s ~ %2$s</string>
+    <string name="news_web">Source：</string>
+    <string name="news_limit_buy">Per person limit %spiece</string>
+    <string name="news_time">%1$sDay %2$sHour %3$sMinute %4$sSecond</string>
+    <string name="news_preOrder">Pre order</string>
+    <string name="news_product_video">Watch the video</string>
+    <string name="news_source">Source：%s</string>
+
+    <!--Commodity magazine-->
+    <string name="magazine_information">Commodity magazine</string>
+    <string name="magazine_new_product">NEW</string>
+    <string name="magazine_pre_orders_product">Pre order</string>
+    <string name="magazine_preoder_days">Day</string>
+    <string name="magazine_preoder_hours">Hour</string>
+    <string name="magazine_preoder_minutes">Minute</string>
+    <string name="magazine_preoder_second">Second</string>
+    <string name="magazine_restriction">Per person limit %s piece</string>
+    <string name="magazine_price">$ %s</string>
+    <string name="magazine_time">%1$s Day %2$s Hour %3$s Minute</string>
+    <string name="magazine_recommened_goods">Recommended products</string>
+    <string name="magazine_share_button_text">Please choose where to share</string>
+    <string name="magazine_share_alert">Please install Facebook or Wechat or Line</string>
+    <!-- Login page -->
+    <string name="login_skip">Skip</string>
+    <string name="login_account">Account</string>
+    <string name="login_password">Password</string>
+    <string name="login">Sign in</string>
+    <string name="login_register">Registered</string>
+    <string name="login_facebook">facebook</string>
+    <string name="login_forget_password">Forget password？</string>
+    <string name="login_account_pw">Please enter your account / password。</string>
+    <string name="login_account_pw_error">Account / password input error, please re-enter!</string>
+    <string name="login_email_error_format">Mailbox is malformed</string>
+    <string name="login_password_error_format">Password format is wrong, please enter 8 to 20 English and digital</string>
+    <string name="login_no_account">This account is not registered</string>
+    <string name="login_account_error">Account wrong</string>
+    <string name="login_password_error">Password wrong</string>
+    <string name="login_not_third_party">This account does not use a third party account registration, please use the general mailbox login</string>
+
+    <!--Registered-->
+    <string name="registered_password_check">Confirm password</string>
+    <string name="registered_account_type">Please enter an email</string>
+    <string name="registered_hollow">%s Hello!</string>
+    <string name="registered_data">The information is incomplete. Please fill in again.</string>
+    <string name="registered_account_registere">Account has been registered, \ n please re-enter.</string>
+    <string name="registered_password_type">Please enter 8 to 20 characters in English and numbers.</string>
+    <string name="registered_name_type">Chinese and English can be</string>
+    <string name="registered_tel">Cellphone number</string>
+    <string name="registered_area">Area</string>
+
+    <string name="registered_open_gps">Please open GPS</string>
+    <string name="register_need_permission">Need to give permission</string>
+    <!--Forget password-->
+    <string name="forgetpassword_title">Forget password</string>
+    <string name="forgetpassword_email">Email</string>
+    <string name="forgetpassword_send_letter">Send a letter of authentication</string>
+    <string name="forgetpassword_no_account">Check this account, please re-enter.</string>
+    <string name="forgetpassword_sent_letter">Sent message.</string>
+    <string name="forgetpassword_account_type">Account input error, please re-enter.</string>
+
+    <!--Members modified-->
+    <string name="profile_passowrd_error">Password input error, please re-enter.</string>
+    <string name="profile_edit_success">Member information has been updated.</string>
+    <string name="profile_data_format_error">Data format error.</string>
+
+    <!--Pre - order goods-->
+    <string name="preorder_information">Use the following information.</string>
+    <string name="preorder_phone">Phone</string>
+    <string name="preorder_address">Address</string>
+    <string name="preorder_total">Total amount</string>
+    <string name="preorder_save_information">Do you want to save this pre-order information for next use?</string>
+    <string name="preorder_defined_name">Please define a common data name.</string>
+    <string name="preorder_success">Pre-order success.</string>
+    <string name="preorder_number_over">Remaining group %s piece</string>
+    <string name="pre_order_name">Name</string>
+    <string name="pre_order_phone">Phone</string>
+    <string name="pre_order_address">Address</string>
+
+    <!-- Logo page -->
+    <string name="logo_tw_title">UITS全球產品防偽驗証系統</string>
+    <string name="logo_en_title">Unique ID Tracking Service</string>
+    <string name="logo_version">V %s</string>
+
+
+    <!-- Navigation page   -->
+    <string name="navagation_title_1">iFair Certification, quality assurance.</string>
+    <string name="navagation_title_2">Keep up to date.</string>
+    <string name="navagation_title_3">Quality commodity magazine</string>
+    <string name="navagation_title_4">Use NFC close range infinity communication</string>
+
+    <string name="navagation_scription_1">Through the iFair app, easy to find good quality merchandise.</string>
+    <string name="navagation_scription_2">Keep up-to-date with the latest events.</string>
+    <string name="navagation_scription_3">Stay up-to-date and easily buy the latest quality products.</string>
+    <string name="navagation_scription_4">Short-range high-frequency wireless communication technology that allows devices to read near-range wireless communication (NFC) tags that contain products.</string>
+
+    <string name="navagation_terms_of_service_1">To perform this registration step, the representative has agreed to us.</string>
+    <string name="navagation_terms_of_service_2">Terms of Service</string>
+
+    <string name="navagation_privacy_policy_1">Participate in us</string>
+    <string name="navagation_privacy_policy_2">Terms of Service and Privacy Policy</string>
+
+    <!-- Setting -->
+    <string name="setting_title">Setting</string>
+    <string name="setting_noise">Scan sound effects</string>
+    <string name="setting_notification">Push</string>
+    <string name="setting_shock">Scan vibration</string>
+    <string name="setting_member">Membership changes</string>
+    <string name="setting_change_password">Change password</string>
+    <string name="setting_nfc_introduction">NFC Introduction</string>
+    <string name="setting_about">About iFair</string>
+    <string name="setting_logout">Sign out</string>
+    <string name="setting_profile_title">Membership changes</string>
+    <string name="setting_account">Account</string>
+    <string name="setting_password">Password</string>
+    <string name="setting_new_password">New password</string>
+    <string name="setting_confirm_password">Confirm password</string>
+    <string name="setting_name">Name</string>
+    <string name="setting_birthday">Birthday</string>
+    <string name="setting_gender">Gender</string>
+    <string name="setting_phone">Cellphone number</string>
+    <string name="setting_area">Area</string>
+    <string name="setting_save">Store</string>
+    <string name="setting_not_save">Not stored</string>
+
+    <!--My Favourite-->
+    <string name="favorite_title">Favourite</string>
+    <string name="favorite_more">More</string>
+
+    <!-- Alert -->
+    <string name="alert_warming">Warning</string>
+    <string name="alert_confirm">Confirm</string>
+    <string name="alert_no_nfc">This phone does not have NFC functionality</string>
+    <string name="alert_no_network">If the connection is out of date, please check the status of the network.</string>
+    <string name="alert_enter_content">Please enter%s</string>
+    <string name="alert_enter_old_password">Please enter the old password</string>
+    <string name="alert_enter_new_password">Please enter a new password</string>
+    <string name="alert_enter_confirm_new_password">Please enter a confirmation new password</string>
+    <string name="alert_old_password_error_type">Old password format is incorrect, please enter 8 to 20 alphanumeric mix.</string>
+    <string name="alert_new_password_error_type">New password format is incorrect, please enter 8 ~ 20 English digital mix.</string>
+    <string name="alert_confirm_new_password_error_type">Make sure the new password is formatted incorrectly. Please enter 8 to 20 alphanumeric characters.</string>
+    <string name="alert_password_no_equals">The new password does not match the new password.</string>
+    <string name="alert_old_password_error">Old password is wrong.</string>
+    <string name="alert_re_login">To change your password successfully, please ensure that your information is secure.</string>
+    <string name="alert_join_member">Please join the member before using my favorite function.</string>
+    <string name="alert_back_app">Press the key again to exit the program.</string>
+
+    <string name="facebook_app_id">1105313869576971</string>
+    <string name="to_top">Top</string>
+
+</resources>

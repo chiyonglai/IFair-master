@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.ifair.MyApplication;
 import com.ifair.R;
 
+import java.util.Locale;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

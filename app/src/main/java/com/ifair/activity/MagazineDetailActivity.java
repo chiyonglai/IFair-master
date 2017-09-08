@@ -61,6 +61,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 
 import butterknife.BindView;
@@ -191,7 +192,7 @@ public class MagazineDetailActivity extends BaseNFcActivity implements OnGetMaga
         cloudAPI = CloudAPI.getInstance();
         cloudAPI.setOnGetMagazineDetailListener(this);
         cloudAPI.setOnGetMagazineGoodsDownListener(this);
-        cloudAPI.GetMagazineDetail(unique_value, goodsId, this);
+        cloudAPI.GetMagazineDetail(unique_value, goodsId, this, Locale.getDefault().getLanguage());
 
         nfcBroadCast = new NfcBroadCast();
         registerReceiver(nfcBroadCast, new IntentFilter(Variable.Intent_Close_NFC_Activity));
@@ -215,8 +216,14 @@ public class MagazineDetailActivity extends BaseNFcActivity implements OnGetMaga
         initViewPager();
         txtTitle.setText(data.getGoods_name()); //標題
         txtGoodsTitle.setText(data.getGoods_name()); //標題
-        tvGoodsPrice.setText(getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(data.getOriginal_price())))));  //原價
-        tvGoodsSalePrice.setText(getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(data.getPrice())))));      //特價
+
+        if(Integer.valueOf(data.getPrice()) > 0){
+            tvGoodsSalePrice.setText(getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(data.getPrice())))));      //特價
+        } else {
+            //2017/9/5價格零不顯示
+            tvGoodsSalePrice.setText("");      //特價
+        }
+
         if(Integer.parseInt(data.getOriginal_price()) == Integer.parseInt(data.getPrice())){
             //改原價與特價都相同，只秀橘色字顯示位置置中
             //android:gravity="left"
@@ -225,6 +232,20 @@ public class MagazineDetailActivity extends BaseNFcActivity implements OnGetMaga
         }else{
             tvGoodsSalePrice.setGravity(Gravity.LEFT);
         }
+
+        if(Integer.valueOf(data.getOriginal_price()) > 0){
+            if(Integer.valueOf(data.getPrice()) <= 0){
+                tvMagDetailRL2.setVisibility(View.GONE);
+            } else {
+                tvGoodsPrice.setText(getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(data.getOriginal_price())))));  //原價
+            }
+        } else {
+            //2017/9/5價格零不顯示
+            tvGoodsPrice.setText("");  //原價
+            tvGoodsSalePrice.setGravity(Gravity.CENTER);
+            tvMagDetailRL2.setVisibility(View.GONE);
+        }
+
         txtLikeNum.setText(AppUtil.numberFormat(data.getLike())); //按讚數
         txtContent.setText(data.getIntroduction()); // 內文
         //txtFirm.setText((data.getFirm_name())); //廠商名稱
@@ -282,7 +303,7 @@ public class MagazineDetailActivity extends BaseNFcActivity implements OnGetMaga
             if (!magazineGoodsDownResponse.getData().get(i).getGoods_id().equals(magazineDetailResponse.getData().get(0).getGoods_id())){
                 //fragments.add(MagazineGoodsDownFragment.getInstance(magazineDetailResponse.getData().get(0).getFirm_name(), magazineGoodsDownResponse.getData().get(i).getGoods_id(), magazineGoodsDownResponse.getData().get(i).getGoods_name(), magazineGoodsDownResponse.getData().get(i).getGoods_image2(), magazineGoodsDownResponse.getData().get(i).getOriginal_price(), magazineGoodsDownResponse.getData().get(i).getPrice()));
                 //2017/08/18取消廠商名稱Firm_name、商品原價格Original_price
-                fragments.add(MagazineGoodsDownFragment.getInstance("", magazineGoodsDownResponse.getData().get(i).getGoods_id(), magazineGoodsDownResponse.getData().get(i).getGoods_name(), magazineGoodsDownResponse.getData().get(i).getGoods_image2(), "999999", magazineGoodsDownResponse.getData().get(i).getPrice()));
+                fragments.add(MagazineGoodsDownFragment.getInstance("", magazineGoodsDownResponse.getData().get(i).getGoods_id(), magazineGoodsDownResponse.getData().get(i).getGoods_name(), magazineGoodsDownResponse.getData().get(i).getGoods_image2(), magazineGoodsDownResponse.getData().get(i).getOriginal_price(), magazineGoodsDownResponse.getData().get(i).getPrice()));
             }
         }
         return fragments;
@@ -333,7 +354,7 @@ public class MagazineDetailActivity extends BaseNFcActivity implements OnGetMaga
                 setData(magazineDetailResponse.getData().get(0));
 
                 firm_id = magazineDetailResponse.getData().get(0).getFirm_id();
-                cloudAPI.getMagazineGoodsDown("", firm_id, this);
+                cloudAPI.getMagazineGoodsDown("", firm_id, this,Locale.getDefault().getLanguage());
                 //按LIKE
                 //判斷是不是有按過
                 imgLike.setBackgroundResource(magazineDetailResponse.getData().get(0).getIs_like().equals("true") ?

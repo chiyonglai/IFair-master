@@ -5,6 +5,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,12 +81,33 @@ public class FavoriteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             int index = position % 7;
             if (index == 0 || index == 4 || index == 5 || index == 6) {
                 ((RecycleHolder) holder).linePrice.setVisibility(View.VISIBLE);
+                ((RecycleHolder) holder).tvGoodsPrice.setVisibility(View.VISIBLE);
                 ((RecycleHolder) holder).tvGoodsPriceYellow.setVisibility(View.VISIBLE);
                 ((RecycleHolder) holder).tvGoodsPrice.setText(context.getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(dataBeanList.get(position - 1).getOriginal_price())))));
                 ((RecycleHolder) holder).tvGoodsPrice.setTextColor(context.getResources().getColor(R.color.color_line));
                 ((RecycleHolder) holder).tvGoodsPriceYellow.setText(context.getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(dataBeanList.get(position - 1).getPrice())))));
-                ((RecycleHolder) holder).tvGoodsPreDate.setVisibility(View.GONE);
 
+                if (Integer.valueOf(dataBeanList.get(position - 1).getPrice()) <= 0) {
+                    //2017/9/5價格零不顯示
+                    ((RecycleHolder) holder).tvGoodsPrice.setVisibility(View.GONE);//關原價
+                    ((RecycleHolder) holder).tvGoodsPriceYellow.setVisibility(View.GONE);
+                    ((RecycleHolder) holder).linePrice.setVisibility(View.GONE);
+                }
+
+                if (Integer.parseInt(dataBeanList.get(position - 1).getPrice()) == Integer.parseInt(dataBeanList.get(position - 1).getOriginal_price())) {
+                    //2017/9/5價格零不顯示
+                    ((RecycleHolder) holder).tvGoodsPrice.setVisibility(View.GONE);//關原價
+                    ((RecycleHolder) holder).linePrice.setVisibility(View.GONE);
+                }
+
+                if (Integer.valueOf(dataBeanList.get(position - 1).getOriginal_price()) <= 0) {
+                    //2017/9/5價格零不顯示
+                    ((RecycleHolder) holder).linePrice.setVisibility(View.GONE);
+                    ((RecycleHolder) holder).tvGoodsPrice.setVisibility(View.GONE);
+                } else {
+                    ((RecycleHolder) holder).tvGoodsPriceYellow.setGravity(Gravity.LEFT);
+                }
+                ((RecycleHolder) holder).tvGoodsPreDate.setVisibility(View.GONE);
             } else {
                 int[] num = MyTimeUtils.returnPreOrderReciprocal(dataBeanList.get(position - 1).getPre_date_e(), new Date(System.currentTimeMillis()));
                 if ( num[0] >= 0 && num[1] >= 0 && num[2] >= 0) {
@@ -96,6 +118,12 @@ public class FavoriteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 }
                 ((RecycleHolder) holder).tvGoodsPrice.setText(context.getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(dataBeanList.get(position - 1).getPrice())))));
                 ((RecycleHolder) holder).tvGoodsPrice.setTextColor(context.getResources().getColor(R.color.color_text_black));
+                ((RecycleHolder) holder).tvGoodsPrice.setVisibility(View.VISIBLE);
+                if (Integer.valueOf(dataBeanList.get(position - 1).getPrice()) <= 0) {
+                    //2017/9/5價格零不顯示
+                    ((RecycleHolder) holder).tvGoodsPrice.setVisibility(View.GONE);
+                }
+
                 ((RecycleHolder) holder).linePrice.setVisibility(View.GONE);
                 ((RecycleHolder) holder).tvGoodsPriceYellow.setVisibility(View.GONE);
                 ((RecycleHolder) holder).tvGoodsPreDate.setVisibility(View.VISIBLE);

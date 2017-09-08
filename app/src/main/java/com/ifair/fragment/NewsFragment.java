@@ -30,6 +30,7 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -155,7 +156,7 @@ public class NewsFragment extends BaseFragment implements OnGetLatestNewsListene
     private void callApi() {
         cloudAPI = CloudAPI.getInstance();
         cloudAPI.setOnGetLatestNewsListener(this);
-        cloudAPI.getLatestNews(AppUtil.getMacAddress());
+        cloudAPI.getLatestNews(AppUtil.getMacAddress(), Locale.getDefault().getLanguage());
     }
 
     @Override
@@ -168,7 +169,7 @@ public class NewsFragment extends BaseFragment implements OnGetLatestNewsListene
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void refreshUI(NewEvent newEvent) {
         if (newEvent.isLike())
-            cloudAPI.getLatestNews(AppUtil.getMacAddress());
+            cloudAPI.getLatestNews(AppUtil.getMacAddress(),Locale.getDefault().getLanguage());
     }
 
     @OnClick(R.id.img_top)
@@ -191,7 +192,7 @@ public class NewsFragment extends BaseFragment implements OnGetLatestNewsListene
     @Override
     public void getAddLikeMessage(int code, String error) {
         if (code == CloudCode.Code_SUCCESS) {
-            cloudAPI.getLatestNews(AppUtil.getMacAddress());
+            cloudAPI.getLatestNews(AppUtil.getMacAddress(),Locale.getDefault().getLanguage());
         }
     }
 

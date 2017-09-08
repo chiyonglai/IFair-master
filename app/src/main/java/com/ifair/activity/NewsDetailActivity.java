@@ -46,6 +46,7 @@ import org.greenrobot.eventbus.EventBus;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -168,7 +169,7 @@ public class NewsDetailActivity extends BaseNFcActivity implements OnGetLatestNe
         //抓取資料
         cloudAPI = CloudAPI.getInstance();
         cloudAPI.setOnGetLatestNewsDetailListener(this);
-        cloudAPI.getLatestNewsDetail(AppUtil.getMacAddress(), message_id, this);
+        cloudAPI.getLatestNewsDetail(AppUtil.getMacAddress(), message_id, this, Locale.getDefault().getLanguage());
         //取得使用者資訊
         getLoginResponse();
         unique_value = userEmail.equals("") ? AppUtil.getMacAddress() : userEmail;

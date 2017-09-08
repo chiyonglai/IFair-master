@@ -25,6 +25,7 @@ import com.ifair.myUtil.AppUtil;
 import com.ifair.myUtil.MyAnimationUtils;
 import com.ifair.myUtil.Variable;
 
+import java.util.Locale;
 import java.util.Objects;
 
 import butterknife.BindView;
@@ -102,7 +103,7 @@ public class NfcProductFragment extends BaseFragment implements OnGetTrueGoodsLi
         if (!product_id.equals("")) {
             cloudAPI = CloudAPI.getInstance();
             cloudAPI.setOnGetTrueGoodsListener(this);
-            cloudAPI.getTrueGoods(product_id, getActivity());
+            cloudAPI.getTrueGoods(product_id, getActivity(), Locale.getDefault().getLanguage());
             relaFakeProduct.setVisibility(View.GONE);
             relaRealProduct.setVisibility(View.VISIBLE);
         } else {

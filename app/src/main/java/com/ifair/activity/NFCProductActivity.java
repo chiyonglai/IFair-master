@@ -29,6 +29,7 @@ import com.ifair.myUtil.AppUtil;
 import com.ifair.myUtil.Variable;
 import com.makeramen.roundedimageview.RoundedImageView;
 
+import java.util.Locale;
 import java.util.Objects;
 
 import butterknife.BindView;
@@ -121,7 +122,7 @@ public class NFCProductActivity extends BaseActivity implements OnGetTrueGoodsLi
             txtTitle.setText(getString(R.string.nfc_title_register));
             cloudAPI = CloudAPI.getInstance();
             cloudAPI.setOnGetTrueGoodsListener(this);
-            cloudAPI.getTrueGoods(product_id, this);
+            cloudAPI.getTrueGoods(product_id, this, Locale.getDefault().getLanguage());
             scrollTrueProduct.setVisibility(View.VISIBLE);
         }
 

@@ -1,0 +1,189 @@
+<resources>
+    <string name="app_name">iFair</string>
+
+    <!-- 选单按钮下方文字 -->
+    <string name="menu_icon_text_1">真伪验证</string>
+    <string name="menu_icon_text_2">商品杂志</string>
+    <string name="menu_icon_text_3">最新消息</string>
+    <string name="menu_icon_text_4">我的最爱</string>
+    <string name="menu_icon_text_5">设定</string>
+
+    <!-- NFC 页面 -->
+    <string name="nfc_title">NFC扫描</string>
+    <string name="nfc_touch_scan">轻触萤幕\n将您的手机靠近商品NFC感应标签</string>
+    <string name="nfc_scanning">扫描中...</string>
+    <string name="nfc_true_product">这是经过认证的商品</string>
+    <string name="nfc_fake_product">非原厂认证商品</string>
+    <string name="nfc_true_product_more">观看更多资讯</string>
+    <string name="nfc_submit">是否提报？</string>
+    <string name="nfc_submit_info">提报资讯</string>
+    <string name="nfc_btn_send">送出</string>
+    <string name="nfc_where_goods">您在哪里看到这个商品？</string>
+    <string name="nfc_explanation">补充说明</string>
+    <string name="nfc_up_file">上传商品图片</string>
+    <string name="nfc_product_id">产品ID : %s</string>
+    <string name="nfc_product_date">注册日期 : %s</string>
+    <string name="nfc_firm_info">厂商资讯</string>
+    <string name="nfc_title_no_register">未注册产品</string>
+    <string name="nfc_title_register">注册产品</string>
+    <string name="nfc_submit_success">举报成功</string>
+    <string name="nfc_error_submit">异常提报</string>
+    <string name="nfc_real_more">观看更多资讯</string>
+    <string name="nfc_real">原厂认证商品</string>
+    <string name="nfc_note">备注：</string>
+    <string name="nfc_report">第三方公证报告</string>
+    <string name="nfc_product_resume">产品履历</string>
+
+    <!-- 最新消息 页面 -->
+    <string name="news_title">最新消息</string>
+    <string name="news_activity_date">活动日期：%1$s ~ %2$s</string>
+    <string name="news_web">资料来源：</string>
+    <string name="news_limit_buy">每人限制 %s组</string>
+    <string name="news_time">%1$s日 %2$s时 %3$s分 %4$s秒</string>
+    <string name="news_preOrder">预购</string>
+    <string name="news_product_video">观赏影片</string>
+    <string name="news_source">来源：%s</string>
+
+    <!--商品杂志-->
+    <string name="magazine_information">商品杂志</string>
+    <string name="magazine_new_product">NEW</string>
+    <string name="magazine_pre_orders_product">预购</string>
+    <string name="magazine_preoder_days">日</string>
+    <string name="magazine_preoder_hours">时</string>
+    <string name="magazine_preoder_minutes">分</string>
+    <string name="magazine_preoder_second">秒</string>
+    <string name="magazine_restriction">每人限购 %s 个</string>
+    <string name="magazine_price">$ %s</string>
+    <string name="magazine_time">%1$s 日 %2$s 时 %3$s 分</string>
+    <string name="magazine_recommened_goods">推荐商品</string>
+    <string name="magazine_share_button_text">请选择要分享的地方</string>
+    <string name="magazine_share_alert">请安装Facebook或Wechat或Line</string>
+    <!-- Login 页面 -->
+    <string name="login_skip">略过</string>
+    <string name="login_account">帐号</string>
+    <string name="login_password">密码</string>
+    <string name="login">登入</string>
+    <string name="login_register">注册</string>
+    <string name="login_facebook">facebook</string>
+    <string name="login_forget_password">忘记密码？ </string>
+    <string name="login_account_pw">请输入帐号/密码。 </string>
+    <string name="login_account_pw_error">帐号/密码输入错误，请重新输入!</string>
+    <string name="login_email_error_format">信箱格式错误</string>
+    <string name="login_password_error_format">密码格式错误，请输入8 ~ 20英文与数字</string>
+    <string name="login_no_account">此帐号没有注册过</string>
+    <string name="login_account_error">帐号错误</string>
+    <string name="login_password_error">密码错误</string>
+    <string name="login_not_third_party">此帐号非使用第三方帐号注册，请使用一般信箱登入</string>
+
+    <!--注册-->
+    <string name="registered_password_check">确认密码</string>
+    <string name="registered_account_type">请输入电子邮件</string>
+    <string name="registered_hollow">%s 您好!</string>
+    <string name="registered_data">资料不完整，请重新填写。 </string>
+    <string name="registered_account_registere">帐号已被注册，\n请重新输入。 </string>
+    <string name="registered_password_type">请输入8~20字元英文与数字</string>
+    <string name="registered_name_type">中英文皆可</string>
+    <string name="registered_tel">手机号码</string>
+    <string name="registered_area">地区</string>
+
+    <string name="registered_open_gps">请打开GPS</string>
+    <string name="register_need_permission">需要给予权限</string>
+    <!--忘记密码-->
+    <string name="forgetpassword_title">忘记密码</string>
+    <string name="forgetpassword_email">电子邮件</string>
+    <string name="forgetpassword_send_letter">发送认证信</string>
+    <string name="forgetpassword_no_account">查无此帐号，请重新输入。 </string>
+    <string name="forgetpassword_sent_letter">已发送信件。 </string>
+    <string name="forgetpassword_account_type">帐号输入错误，请重新输入。 </string>
+
+    <!--会员修改-->
+    <string name="profile_passowrd_error">密码输入错误，请重新输入</string>
+    <string name="profile_edit_success">会员资料已更新。 </string>
+    <string name="profile_data_format_error">资料格式错误。 </string>
+
+    <!--预购商品-->
+    <string name="preorder_information">使用下列资料</string>
+    <string name="preorder_phone">电话</string>
+    <string name="preorder_address">地址</string>
+    <string name="preorder_total">总金额</string>
+    <string name="preorder_save_information">是否储存此预购资讯，供下次使用?</string>
+    <string name="preorder_defined_name">请定义常用资料名称</string>
+    <string name="preorder_success">预购成功。 </string>
+    <string name="preorder_number_over">剩余组数 %s组</string>
+    <string name="pre_order_name">姓名</string>
+    <string name="pre_order_phone">电话</string>
+    <string name="pre_order_address">地址</string>
+
+    <!-- Logo 页面 -->
+    <string name="logo_tw_title">UITS全球产品防伪验证系统</string>
+    <string name="logo_en_title">Unique ID Tracking Service</string>
+    <string name="logo_version">V %s</string>
+
+
+    <!-- 导览页面 -->
+    <string name="navagation_title_1">iFair认证,品质保证</string>
+    <string name="navagation_title_2">随时掌握第一资讯</string>
+    <string name="navagation_title_3">优质商品杂志</string>
+    <string name="navagation_title_4">使用NFC近距离无限通讯</string>
+
+    <string name="navagation_scription_1">透过iFair app，轻松找寻品质优良的商品。 </string>
+    <string name="navagation_scription_2">随时发布最新活动，让你第一手得知优惠活动。 </string>
+    <string name="navagation_scription_3">随时掌握并轻松购入最新优质商品。 </string>
+    <string name="navagation_scription_4">短距离的高频率无线通讯技术，允许装置读取包含产品的近距离无线通讯(NFC)标签。 </string>
+
+    <string name="navagation_terms_of_service_1">执行此注册步骤，即代表已同意我们的</string>
+    <string name="navagation_terms_of_service_2">服务条款</string>
+
+    <string name="navagation_privacy_policy_1">参与我们的</string>
+    <string name="navagation_privacy_policy_2">服务条款和隐私政策</string>
+
+
+    <!-- Setting -->
+    <string name="setting_title">设定</string>
+    <string name="setting_noise">扫描音效</string>
+    <string name="setting_notification">推播</string>
+    <string name="setting_shock">扫描震动</string>
+    <string name="setting_member">会员资料修改</string>
+    <string name="setting_change_password">修改密码</string>
+    <string name="setting_nfc_introduction">NFC介绍</string>
+    <string name="setting_about">关于iFair</string>
+    <string name="setting_logout">登出</string>
+    <string name="setting_profile_title">会员资料修改</string>
+    <string name="setting_account">帐号</string>
+    <string name="setting_password">密码</string>
+    <string name="setting_new_password">新密码</string>
+    <string name="setting_confirm_password">确认密码</string>
+    <string name="setting_name">姓名</string>
+    <string name="setting_birthday">生日</string>
+    <string name="setting_gender">性别</string>
+    <string name="setting_phone">手机号码</string>
+    <string name="setting_area">地区</string>
+    <string name="setting_save">储存</string>
+    <string name="setting_not_save">不储存</string>
+
+    <!--我的最爱-->
+    <string name="favorite_title">我的最爱</string>
+    <string name="favorite_more">更多</string>
+
+    <!-- Alert -->
+    <string name="alert_warming">警告</string>
+    <string name="alert_confirm">确认</string>
+    <string name="alert_no_nfc">此手机没有NFC功能</string>
+    <string name="alert_no_network">连线逾时，请检察网路状态</string>
+    <string name="alert_enter_content">请输入%s</string>
+    <string name="alert_enter_old_password">请输入旧密码</string>
+    <string name="alert_enter_new_password">请输入新密码</string>
+    <string name="alert_enter_confirm_new_password">请输入确认新密码</string>
+    <string name="alert_old_password_error_type">旧密码格式有误，请输入8~20英数字混合</string>
+    <string name="alert_new_password_error_type">新密码格式有误，请输入8~20英数字混合</string>
+    <string name="alert_confirm_new_password_error_type">确认新密码格式有误，请输入8~20英数字混合</string>
+    <string name="alert_password_no_equals">新密码与确认新密码不相符</string>
+    <string name="alert_old_password_error">旧密码错误</string>
+    <string name="alert_re_login">修改密码成功，为了确保资讯安全，请重新登入</string>
+    <string name="alert_join_member">请先加入会员才能使用我的最爱功能</string>
+    <string name="alert_back_app">再按一次返回键退出程式</string>
+
+    <string name="facebook_app_id">1105313869576971</string>
+    <string name="to_top">Top</string>
+
+</resources>

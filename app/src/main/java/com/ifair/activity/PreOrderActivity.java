@@ -42,6 +42,7 @@ import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -153,7 +154,7 @@ public class PreOrderActivity extends BaseNFcActivity implements OnGetPreOrderDe
         txtTitle.setText(getResources().getString(R.string.news_preOrder));
         cloudAPI = CloudAPI.getInstance();
         cloudAPI.setOnGetPreOrderDetailListener(this);
-        cloudAPI.getPreOrderDetail(good_id, this);
+        cloudAPI.getPreOrderDetail(good_id, this, Locale.getDefault().getLanguage());
 
         nfcBroadCast = new NfcBroadCast();
         registerReceiver(nfcBroadCast, new IntentFilter(Variable.Intent_Close_NFC_Activity));
@@ -169,10 +170,20 @@ public class PreOrderActivity extends BaseNFcActivity implements OnGetPreOrderDe
         txtPreorderName.setText(preOrderResponse.getGoods_name()); //商品名稱
         if (preOrderResponse.getPre_amount() != null)
             txtPreorderQuantity.setText(getResources().getString(R.string.magazine_restriction, preOrderResponse.getAmount())); //限購組數
-        txtPreorderOver.setText(getString(R.string.preorder_number_over, String.valueOf(preOrderResponse.getPre_amount())));
-        txtPreorderPrice.setText(getString(R.string.magazine_price, AppUtil.numberFormat(preOrderResponse.getOriginal_price()))); //原價
+            txtPreorderOver.setText(getString(R.string.preorder_number_over, String.valueOf(preOrderResponse.getPre_amount())));
+
+        if(Integer.valueOf(preOrderResponse.getOriginal_price()) <= 0) {
+            txtPreorderPrice.setText(""); //原價
+        } else {
+            txtPreorderPrice.setText(getString(R.string.magazine_price, AppUtil.numberFormat(preOrderResponse.getOriginal_price()))); //原價
+        }
+
         txtPreorderPrice.setPaintFlags(txtPreorderPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG); //設定刪除線
-        txtPreorderTotal.setText(getString(R.string.magazine_price, AppUtil.numberFormat(preOrderResponse.getPrice()))); //總金額
+        if(Integer.valueOf(preOrderResponse.getPrice()) <= 0) {
+            txtPreorderTotal.setText(""); //總金額
+        } else {
+            txtPreorderTotal.setText(getString(R.string.magazine_price, AppUtil.numberFormat(preOrderResponse.getPrice()))); //總金額
+        }
 
     }
 
@@ -427,7 +438,9 @@ public class PreOrderActivity extends BaseNFcActivity implements OnGetPreOrderDe
                 } else if (AppUtil.editToString(editPreorderAddress).equals("")) {
                     alert(getString(R.string.alert_enter_content, getString(R.string.pre_order_address)));
                 } else {
-                    askPreOrder();
+                    if((Integer.valueOf(preOrderResponse.getPrice()) > 0) && (Integer.valueOf(preOrderResponse.getPre_amount()) > 0)) {
+                        askPreOrder();
+                    }
                 }
                 break;
             case R.id.activity_pre_order:

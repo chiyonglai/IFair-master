@@ -36,6 +36,7 @@ import com.nineoldandroids.view.ViewHelper;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 
 import butterknife.BindView;
@@ -193,7 +194,7 @@ public class MagazineFragment extends BaseFragment implements ObservableScrollVi
     private void callApi() {
         cloudAPI = CloudAPI.getInstance();
         cloudAPI.setOnGetMagazineListener(this);
-        cloudAPI.getMagazine("", getActivity());
+        cloudAPI.getMagazine("", getActivity(), Locale.getDefault().getLanguage());
     }
 
 
@@ -203,7 +204,7 @@ public class MagazineFragment extends BaseFragment implements ObservableScrollVi
     private void setAD() {
         cloudAPI = CloudAPI.getInstance();
         cloudAPI.setOnGetAdvertisingListener(this);
-        cloudAPI.getAdvertising(getActivity());
+        cloudAPI.getAdvertising(getActivity(), Locale.getDefault().getLanguage());
     }
 
     /**

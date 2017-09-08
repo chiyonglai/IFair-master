@@ -5,6 +5,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -86,10 +87,28 @@ public class MagazineAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             int index = position % 7;
             if (index == 0 || index == 4 || index == 5 || index == 6) {
                 ((RecycleHolder) holder).linePrice.setVisibility(View.VISIBLE);
+                ((RecycleHolder) holder).tvGoodsPrice.setVisibility(View.VISIBLE);
                 ((RecycleHolder) holder).tvGoodsPriceYellow.setVisibility(View.VISIBLE);
                 ((RecycleHolder) holder).tvGoodsPrice.setText(context.getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(dataBeanList.get(position - 1).getOriginal_price())))));
-                ((RecycleHolder) holder).tvGoodsPrice.setTextColor(context.getResources().getColor(R.color.color_line));
                 ((RecycleHolder) holder).tvGoodsPriceYellow.setText(context.getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(dataBeanList.get(position - 1).getPrice())))));
+                ((RecycleHolder) holder).tvGoodsPrice.setTextColor(context.getResources().getColor(R.color.color_line));
+                if(Integer.valueOf(dataBeanList.get(position - 1).getPrice()) <= 0) {
+                    //2017/9/5價格零不顯示 售價 0 原價 8900 、售價 0 原價 0
+                    ((RecycleHolder) holder).tvGoodsPrice.setVisibility(View.GONE);//關原價
+                    ((RecycleHolder) holder).tvGoodsPriceYellow.setVisibility(View.GONE);
+                    ((RecycleHolder) holder).linePrice.setVisibility(View.GONE);
+                }
+                if(Integer.parseInt(dataBeanList.get(position - 1).getPrice()) == Integer.parseInt(dataBeanList.get(position - 1).getOriginal_price())) {
+                    ((RecycleHolder) holder).tvGoodsPrice.setVisibility(View.GONE);
+                    ((RecycleHolder) holder).linePrice.setVisibility(View.GONE);
+                }
+                if(Integer.valueOf(dataBeanList.get(position - 1).getOriginal_price()) <= 0) {
+                    //2017/9/5價格零不顯示
+                    ((RecycleHolder) holder).linePrice.setVisibility(View.GONE);
+                    ((RecycleHolder) holder).tvGoodsPrice.setVisibility(View.GONE);
+                } else {
+                    ((RecycleHolder) holder).tvGoodsPriceYellow.setGravity(Gravity.LEFT);
+                }
                 ((RecycleHolder) holder).tvGoodsPreDate.setVisibility(View.GONE);
 
             } else {
@@ -98,10 +117,14 @@ public class MagazineAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                     String goodsPreDate2 = "<font color='#f6b300'><b>" + String.valueOf(num[1]) + "</b></font>";
                     String goodsPreDate3 = "<font color='#f6b300'><b>" + String.valueOf(num[2]) + "</b></font>";
                     ((RecycleHolder) holder).tvGoodsPreDate.setText(Html.fromHtml(context.getString(R.string.magazine_time, goodsPreDate1, goodsPreDate2, goodsPreDate3)));
-
                 }
                 ((RecycleHolder) holder).tvGoodsPrice.setText(context.getString(R.string.magazine_price, AppUtil.numberFormat(String.valueOf(Integer.valueOf(dataBeanList.get(position - 1).getPrice())))));
                 ((RecycleHolder) holder).tvGoodsPrice.setTextColor(context.getResources().getColor(R.color.color_text_black));
+                ((RecycleHolder) holder).tvGoodsPrice.setVisibility(View.VISIBLE);
+                if (Integer.valueOf(dataBeanList.get(position - 1).getPrice()) <= 0) {
+                    //2017/9/5價格零不顯示
+                    ((RecycleHolder) holder).tvGoodsPrice.setVisibility(View.GONE);
+                }
                 ((RecycleHolder) holder).linePrice.setVisibility(View.GONE);
                 ((RecycleHolder) holder).tvGoodsPriceYellow.setVisibility(View.GONE);
                 ((RecycleHolder) holder).tvGoodsPreDate.setVisibility(View.VISIBLE);

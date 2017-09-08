@@ -437,10 +437,11 @@ public class CloudAPI {
      *
      * @param email 當空值是商品雜誌，非空值是我的最愛
      */
-    public void getMagazine(String email, Activity activity) {
+    public void getMagazine(String email, Activity activity,String lange) {
         OkGo.post(ApiUri.API_GET_Magazine)
                 .tag(this)
                 .params("email", email)
+                .params("language", lange)
                 .execute(new StringCallback() {
                     @Override
                     public void onError(Call call, Response response, Exception e) {
@@ -469,11 +470,12 @@ public class CloudAPI {
      * @param goods_id
      */
 
-    public void GetMagazineDetail(String unique_value, String goods_id, Activity activity) {
+    public void GetMagazineDetail(String unique_value, String goods_id, Activity activity,String lange) {
         OkGo.post(ApiUri.API_GET_Magazine_Detail)
                 .tag(this)
                 .params("goods_id", goods_id)
                 .params("unique_value", unique_value)
+                .params("language", lange)
                 .execute(new StringCallback() {
                     @Override
                     public void onSuccess(String s, Call call, Response response) {
@@ -501,10 +503,11 @@ public class CloudAPI {
      *
      * @param goods_id 商品編號
      */
-    public void GetPreOrderDetail(String goods_id, Activity activity) {
+    public void GetPreOrderDetail(String goods_id, Activity activity,String lange) {
         OkGo.post(ApiUri.API_GET_PreOrder_Detail)
                 .tag(this)
                 .params("goods_id", goods_id)
+                .params("language", lange)
                 .execute(new DialogCallback(activity) {
                     @Override
                     public void onSuccess(String s, Call call, Response response) {
@@ -706,9 +709,10 @@ public class CloudAPI {
     /**
      * 輪播廣告頁
      */
-    public void getAdvertising(Activity activity) {
+    public void getAdvertising(Activity activity,String lange) {
         OkGo.post(ApiUri.API_GET_Advertising)
                 .tag(this)
+                .params("language", lange)
                 .execute(new DialogCallback(activity) {
 
                     @Override
@@ -847,10 +851,11 @@ public class CloudAPI {
      * @param goods_code 商品ID
      * @param mActivity
      */
-    public void getTrueGoods(String goods_code, Activity mActivity) {
+    public void getTrueGoods(String goods_code, Activity mActivity,String lange) {
         OkGo.post(ApiUri.API_Get_true_goods)
                 .tag(this)
                 .params("goods_code", goods_code)
+                .params("language", lange)
                 .execute(new DialogCallback(mActivity) {
                     @Override
                     public void onSuccess(String s, Call call, Response response) {
@@ -878,10 +883,11 @@ public class CloudAPI {
      *
      * @param mac_address
      */
-    public void getLatestNews(String mac_address) {
+    public void getLatestNews(String mac_address,String lange) {
         OkGo.post(ApiUri.API_Get_Latest_news)
                 .tag(this)
                 .params("mac_address", mac_address)
+                .params("language", lange)
                 .execute(new StringCallback() {
                     @Override
                     public void onSuccess(String s, Call call, Response response) {
@@ -911,11 +917,12 @@ public class CloudAPI {
      * @param message_id
      * @param activity
      */
-    public void getLatestNewsDetail(String mac_address, String message_id, Activity activity) {
+    public void getLatestNewsDetail(String mac_address, String message_id, Activity activity,String lange) {
         OkGo.post(ApiUri.API_Get_Latest_news_detail)
                 .tag(this)
                 .params("mac_address", mac_address)
                 .params("message_id", message_id)
+                .params("language", lange)
                 .execute(new DialogCallback(activity) {
                     @Override
                     public void onSuccess(String s, Call call, Response response) {
@@ -981,10 +988,11 @@ public class CloudAPI {
      * @param goods_id
      * @param mActivity
      */
-    public void getPreOrderDetail(String goods_id, Activity mActivity) {
+    public void getPreOrderDetail(String goods_id, Activity mActivity,String lange) {
         OkGo.post(ApiUri.API_Get_PreOrder)
                 .tag(this)
                 .params("goods_id", goods_id)
+                .params("language", lange)
                 .execute(new DialogCallback(mActivity) {
                     @Override
                     public void onSuccess(String s, Call call, Response response) {
@@ -1101,11 +1109,12 @@ public class CloudAPI {
      *
      * @param email 帳號
      */
-    public void getMagazineGoodsDown(String email, String firm_id, Activity activity) {
+    public void getMagazineGoodsDown(String email, String firm_id, Activity activity,String lange) {
         OkGo.post(ApiUri.API_GET_GOODS_DOWN)
                 .tag(this)
                 .params("email", email)
                 .params("firm_id", firm_id)
+                .params("language", lange)
                 .execute(new DialogCallback(activity) {
             @Override
             public void onSuccess(String s, Call call, Response response) {
