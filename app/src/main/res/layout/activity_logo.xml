@@ -26,7 +26,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="278dp"
+                    android:layout_height="208dp"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
 
@@ -38,25 +38,7 @@
                             android:layout_centerVertical="true"
                             android:src="@drawable/logo_logo_a_icon" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_margin="5dp"
-                            android:textColor="#FFFF"
-                            android:textSize="20sp"
-                            android:text = "@string/logo_tw_title" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_margin="1dp"
-                            android:textColor="#FFFF"
-                            android:textSize="20sp"
-                            android:text="@string/logo_en_title" />
 
 
                 </LinearLayout>
@@ -74,6 +56,16 @@
                             android:layout_weight="1"
                             android:gravity="center_horizontal"
                             android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_margin="5dp"
+                                    android:gravity="center"
+                                    android:text="@string/logo_tw_title"
+                                    android:textColor="#FFFF"
+                                    android:textSize="20sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -82,6 +74,16 @@
                             android:layout_weight="1"
                             android:gravity="center_horizontal"
                             android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_margin="1dp"
+                                    android:gravity="center"
+                                    android:text="@string/logo_en_title"
+                                    android:textColor="#FFFF"
+                                    android:textSize="20sp" />
                         </LinearLayout>
 
                         <LinearLayout

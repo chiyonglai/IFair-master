@@ -56,8 +56,8 @@ public class ProductMoreActivity extends BaseNFcActivity implements OnGetTrueGoo
     TextView txtProductName;
     @BindView(R.id.txt_product_id)
     TextView txtProductId;
-    @BindView(R.id.txt_product_date)
-    TextView txtProductDate;
+    //@BindView(R.id.txt_product_date)
+    //TextView txtProductDate;
     @BindView(R.id.img_tag_icon)
     ImageView imgTagIcon;
     @BindView(R.id.txt_firm_info)
@@ -257,7 +257,7 @@ public class ProductMoreActivity extends BaseNFcActivity implements OnGetTrueGoo
                 this.mNfcProductResponse = nfcProductResponse;
                 txtProductName.setText(nfcProductResponse.getData().get(0).getGoods_name()); //商品名稱
                 txtProductId.setText(getString(R.string.nfc_product_id, nfcProductResponse.getData().get(0).getGoods_code())); //商品編號
-                txtProductDate.setText(getString(R.string.nfc_product_date, MyTimeUtils.clearTime(nfcProductResponse.getData().get(0).getPre_date_s()))); //生產日期
+                //txtProductDate.setText(getString(R.string.nfc_product_date, MyTimeUtils.clearTime(nfcProductResponse.getData().get(0).getPre_date_s()))); //生產日期
                 txtFirmName.setText(nfcProductResponse.getData().get(0).getFirm_name()); //廠商名稱
                 txtFirmPhone.setText(String.valueOf(nfcProductResponse.getData().get(0).getTel())); //廠商客服電話
                 txtFirmAddress.setText(nfcProductResponse.getData().get(0).getAddress()); //廠商地址
@@ -268,7 +268,6 @@ public class ProductMoreActivity extends BaseNFcActivity implements OnGetTrueGoo
                 linearReport.setVisibility(nfcProductResponse.getData().get(0).getBatch_url().equals("") ? View.GONE : View.VISIBLE); //生產報告
                 Glide.with(ProductMoreActivity.this).load(nfcProductResponse.getData().get(0).getBatch_image()).centerCrop().into(imgTagIcon);
                 initViewPager();
-
             }
         }
     }

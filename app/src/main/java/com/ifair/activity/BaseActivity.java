@@ -8,6 +8,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
@@ -327,6 +329,29 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
+   /**
+     *如果手機設定字型調整成特大，執行此APP時會調整回正常大小。
+     * 避免因特大字型而導致跑版
+     */
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        if (newConfig.fontScale != 1)//非默认值
+            getResources();
+        super.onConfigurationChanged(newConfig);
+    }
+    /**
+     *如果手機設定字型調整成特大，執行此APP時會調整回正常大小。
+     * 避免因特大字型而導致跑版
+     */
+    @Override
+    public Resources getResources() {
+        Resources res = super.getResources();
+        if (res.getConfiguration().fontScale != 1) {//非默认值
+            Configuration newConfig = new Configuration();
+            newConfig.setToDefaults();//设置默认
+            res.updateConfiguration(newConfig, res.getDisplayMetrics());
+        }
+        return res;
+    }
+
 }
-
-

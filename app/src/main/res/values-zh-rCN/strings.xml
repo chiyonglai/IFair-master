@@ -21,7 +21,7 @@
     <string name="nfc_where_goods">您在哪里看到这个商品？</string>
     <string name="nfc_explanation">补充说明</string>
     <string name="nfc_up_file">上传商品图片</string>
-    <string name="nfc_product_id">产品ID : %s</string>
+    <string name="nfc_product_id">产品编号 : %s</string>
     <string name="nfc_product_date">注册日期 : %s</string>
     <string name="nfc_firm_info">厂商资讯</string>
     <string name="nfc_title_no_register">未注册产品</string>

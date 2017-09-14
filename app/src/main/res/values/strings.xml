@@ -22,7 +22,7 @@
     <string name="nfc_where_goods">您在哪裡看到這個商品？</string>
     <string name="nfc_explanation">補充說明</string>
     <string name="nfc_up_file">上傳商品圖片</string>
-    <string name="nfc_product_id">產品ID : %s</string>
+    <string name="nfc_product_id">產品編號 : %s</string>
     <string name="nfc_product_date">註冊日期 : %s</string>
     <string name="nfc_firm_info">廠商資訊</string>
     <string name="nfc_title_no_register">未註冊產品</string>

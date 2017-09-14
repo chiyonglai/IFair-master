@@ -91,7 +91,7 @@
         android:layout_marginRight="@dimen/margin_20"
         android:orientation="vertical"
         android:gravity="center_horizontal">
-
+        <!--
         <ImageView
             android:layout_width="@dimen/to_top_img_size"
             android:layout_height="@dimen/to_top_img_size"
@@ -103,7 +103,8 @@
             android:text="@string/nfc_error_submit"
             android:textColor="@color/color_yellow"
             android:textSize="14sp" />
-
+            -->
     </LinearLayout>
+
 
 </RelativeLayout>

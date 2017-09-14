@@ -45,8 +45,8 @@ public class NfcProductFragment extends BaseFragment implements OnGetTrueGoodsLi
     ImageView imgProduct;
     @BindView(R.id.img_youtube)
     ImageView imgYoutube;
-    //@BindView(R.id.rela_youtube)
-    //RelativeLayout relaYoutube;
+    @BindView(R.id.rela_youtube)
+    RelativeLayout relaYoutube;
     @BindView(R.id.img_real_btn_a_playbtn)
     ImageView imgRealPlayBtn;
     @BindView(R.id.linear_more)
@@ -54,8 +54,8 @@ public class NfcProductFragment extends BaseFragment implements OnGetTrueGoodsLi
     Unbinder unbinder;
     @BindView(R.id.rela_real_product)
     RelativeLayout relaRealProduct;
-    @BindView(R.id.btn_submit)
-    Button btnSubmit;
+    //@BindView(R.id.btn_submit)
+    //Button btnSubmit;
     @BindView(R.id.rela_fake_product)
     RelativeLayout relaFakeProduct;
     @BindView(R.id.image_scale)
@@ -84,8 +84,8 @@ public class NfcProductFragment extends BaseFragment implements OnGetTrueGoodsLi
 
     private void adJustUi() {
         getScreenSize();
-        RelativeLayout.LayoutParams btnSubmitLp = (RelativeLayout.LayoutParams) btnSubmit.getLayoutParams();
-        btnSubmitLp.width = (int) (width * 0.8);
+        //RelativeLayout.LayoutParams btnSubmitLp = (RelativeLayout.LayoutParams) btnSubmit.getLayoutParams();
+        //btnSubmitLp.width = (int) (width * 0.8);
     }
 
     @Override
@@ -182,10 +182,10 @@ public class NfcProductFragment extends BaseFragment implements OnGetTrueGoodsLi
         }
     }
 
-    //----------------------------------- API ---------------------------------------//
+    //----------------------------------- API ---------, R.id.btn_submit------------------------------//
 
 
-    @OnClick({R.id.rela_youtube, R.id.linear_more, R.id.btn_submit})
+    @OnClick({R.id.rela_youtube, R.id.linear_more})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rela_youtube:
@@ -198,9 +198,9 @@ public class NfcProductFragment extends BaseFragment implements OnGetTrueGoodsLi
                 bundle.putString("product_id", product_id);
                 goToActivity(ProductMoreActivity.class, bundle);
                 break;
-            case R.id.btn_submit:
-                goToActivity(ProductSubmitActivity.class, null);
-                break;
+            //case R.id.btn_submit:
+            //    goToActivity(ProductSubmitActivity.class, null);
+            //    break;
         }
     }
 

@@ -50,8 +50,8 @@ public class NFCProductActivity extends BaseActivity implements OnGetTrueGoodsLi
     TextView txtMoreInfo;
     @BindView(R.id.scroll_true_product)
     ScrollView scrollTrueProduct;
-    @BindView(R.id.btn_submit)
-    Button btnSubmit;
+    //@BindView(R.id.btn_submit)
+    //Button btnSubmit;
     @BindView(R.id.txt_submit)
     TextView txtSubmit;
     @BindView(R.id.txt_no_register)
@@ -60,8 +60,8 @@ public class NFCProductActivity extends BaseActivity implements OnGetTrueGoodsLi
     LinearLayout linearFakeProduct;
     @BindView(R.id.img_back)
     ImageView imgBack;
-    @BindView(R.id.txt_submit_info)
-    TextView txtSubmitInfo;
+    //@BindView(R.id.txt_submit_info)
+    //TextView txtSubmitInfo;
     @BindView(R.id.activity_nfcproduct)
     LinearLayout activityNfcproduct;
     @BindView(R.id.img_produce_youtube)
@@ -95,10 +95,10 @@ public class NFCProductActivity extends BaseActivity implements OnGetTrueGoodsLi
      * 動態設定UI
      */
     private void adjustUI() {
-        LinearLayout.LayoutParams btnSubmitLp = (LinearLayout.LayoutParams) btnSubmit.getLayoutParams();
-        btnSubmitLp.setMargins(0, (int) (height * 0.017), 0, 0);
-        btnSubmitLp.width = (int) (width * 0.8);
-        btnSubmit.setLayoutParams(btnSubmitLp);
+        //LinearLayout.LayoutParams btnSubmitLp = (LinearLayout.LayoutParams) btnSubmit.getLayoutParams();
+        //btnSubmitLp.setMargins(0, (int) (height * 0.017), 0, 0);
+        //btnSubmitLp.width = (int) (width * 0.8);
+        //btnSubmit.setLayoutParams(btnSubmitLp);
 
         LinearLayout.LayoutParams txtSubmitLp = (LinearLayout.LayoutParams) txtSubmit.getLayoutParams();
         txtSubmitLp.setMargins(0, (int) (height * 0.08), 0, 0);
@@ -114,7 +114,7 @@ public class NFCProductActivity extends BaseActivity implements OnGetTrueGoodsLi
         Bundle bundle = getIntent().getExtras();
         product_id = bundle.getString("product_id");
         if (Objects.equals(product_id, "")) {
-            txtSubmitInfo.setVisibility(View.GONE);
+            //txtSubmitInfo.setVisibility(View.GONE);
             txtTitle.setText(getString(R.string.nfc_title_no_register));
             scrollTrueProduct.setVisibility(View.GONE);
             linearFakeProduct.setVisibility(View.VISIBLE);
@@ -171,9 +171,9 @@ public class NFCProductActivity extends BaseActivity implements OnGetTrueGoodsLi
         }
     }
 
-    //-------------------------API----------------------------------//
+    //-------------------------API------------------------------, R.id.txt_submit_info, R.id.btn_submit,----//
 
-    @OnClick({R.id.txt_more_info, R.id.img_produce_youtube, R.id.btn_submit, R.id.img_back, R.id.txt_submit_info})
+    @OnClick({R.id.txt_more_info, R.id.img_produce_youtube,  R.id.img_back})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.txt_more_info:
@@ -188,15 +188,15 @@ public class NFCProductActivity extends BaseActivity implements OnGetTrueGoodsLi
                 CustomTabsIntent customTabsIntent = builder.build();
                 customTabsIntent.launchUrl(this, Uri.parse(strYoutube));
                 break;
-            case R.id.btn_submit:
-                goPage(ProductSubmitActivity.class, false);
-                break;
+            //case R.id.btn_submit:
+            //    goPage(ProductSubmitActivity.class, false);
+            //    break;
             case R.id.img_back:
                 finish();
                 break;
-            case R.id.txt_submit_info:
-                goPage(ProductSubmitActivity.class, false);
-                break;
+            //case R.id.txt_submit_info:
+            //    goPage(ProductSubmitActivity.class, false);
+            //    break;
         }
     }
 }

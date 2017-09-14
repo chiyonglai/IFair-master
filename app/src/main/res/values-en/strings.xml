@@ -21,7 +21,7 @@
     <string name="nfc_where_goods">Where did you see this product?</string>
     <string name="nfc_explanation">Supplementary explanation</string>
     <string name="nfc_up_file">Upload a product image</string>
-    <string name="nfc_product_id">Product ID : %s</string>
+    <string name="nfc_product_id">Product Code : %s</string>
     <string name="nfc_product_date">Registration date : %s</string>
     <string name="nfc_firm_info">Vendor information</string>
     <string name="nfc_title_no_register">Unregistered product</string>
