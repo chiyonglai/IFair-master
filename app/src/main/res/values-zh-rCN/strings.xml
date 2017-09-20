@@ -169,7 +169,7 @@
     <string name="alert_warming">警告</string>
     <string name="alert_confirm">确认</string>
     <string name="alert_no_nfc">此手机没有NFC功能</string>
-    <string name="alert_no_network">连线逾时，请检察网路状态</string>
+    <string name="alert_no_network">连线逾时，请检查网路状态</string>
     <string name="alert_enter_content">请输入%s</string>
     <string name="alert_enter_old_password">请输入旧密码</string>
     <string name="alert_enter_new_password">请输入新密码</string>
